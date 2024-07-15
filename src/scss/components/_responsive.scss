@@ -1,5 +1,9 @@
 /** > 576px **/
-@media (max-width: 36rem) {
+@media (max-height: 52.5rem) {
+
+	.profile {
+		padding-top: max(.0625rem, calc(70vh - 30rem));
+	}
 
 }
 

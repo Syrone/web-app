@@ -98,6 +98,10 @@ html {
   height: 100%;
   font-family: var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .page__body {
@@ -898,6 +902,7 @@ p + p {
   align-items: center;
   gap: 0.75rem;
   font-weight: 400;
+  margin: 0;
 }
 .profile-balance-icon {
   --_i-size: 2rem;
@@ -974,7 +979,7 @@ p + p {
   gap: 1.25rem;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-block: 1.125rem;
+  margin-block: 1.125rem 1rem;
 }
 .profile-buttons-btn {
   -webkit-box-flex: 1;
@@ -983,6 +988,11 @@ p + p {
 }
 
 /** > 576px **/
+@media (max-height: 52.5rem) {
+  .profile {
+    padding-top: max(0.0625rem, 70vh - 30rem);
+  }
+}
 /** > 380px **/
 @media (max-width: 23.75rem) {
   .header-nav {
