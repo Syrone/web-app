@@ -12,6 +12,12 @@
 
 }
 
+@media (max-height: 41.25rem) {
+	.dis-scroll {
+		overflow: initial;
+	}
+}
+
 /** > 380px **/
 @media (max-width: 23.75rem) {
 	.header {
