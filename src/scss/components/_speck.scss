@@ -38,21 +38,17 @@
 @keyframes appearSpeck {
 		0% {
 				opacity: 0;
-				transform: scale(0.5);
 		}
 		100% {
 				opacity: var(--_opacity-speck, .25);
-				transform: scale(1);
 		}
 }
 
 @keyframes disappearSpeck {
 		0% {
 				opacity: var(--_opacity-speck, .25);
-				transform: scale(1);
 		}
 		100% {
 				opacity: 0;
-				transform: scale(0.5);
 		}
 }

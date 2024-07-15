@@ -202,8 +202,8 @@ const spaceDefault = 4;
 const animationDuration = 5000; // 2s появление + 3s задержка перед исчезновением
 const createInterval = 1000;
 
-// Create a new star element and add it to the container
-function createStar(container) {
+// Create a new star element
+function createStar() {
   const star = document.createElement('span');
   star.classList.add('speck');
 
@@ -214,16 +214,24 @@ function createStar(container) {
   // Randomly select opacity
   const opacityLevel = opacityTypes[Math.floor(Math.random() * opacityTypes.length)];
   star.style.setProperty('--_opacity-speck', opacityLevel);
+  return star;
+}
 
-  // Set random position of the star inside the container
-  star.style.top = `${Math.random() * container.clientHeight}px`;
-  star.style.left = `${Math.random() * container.clientWidth}px`;
-  container.appendChild(star);
+// Add stars to the container
+function addStarsToContainer(container, count) {
+  const fragment = document.createDocumentFragment();
+  for (let i = 0; i < count; i++) {
+    const star = createStar();
+    star.style.top = `${Math.random() * container.clientHeight}px`;
+    star.style.left = `${Math.random() * container.clientWidth}px`;
+    fragment.appendChild(star);
 
-  // Remove the star after the animation is complete
-  setTimeout(() => {
-    container.removeChild(star);
-  }, animationDuration);
+    // Remove the star after the animation is complete
+    setTimeout(() => {
+      star.remove();
+    }, animationDuration);
+  }
+  container.appendChild(fragment);
 }
 
 // Find all containers and create stars in each of them
@@ -236,14 +244,10 @@ document.querySelectorAll('.js-create-specks').forEach(container => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         // Create initial stars immediately
-        for (let i = 0; i < specksCreate; i++) {
-          createStar(container);
-        }
+        addStarsToContainer(container, specksCreate);
         // If the container enters the viewport, start creating stars
         intervalId = setInterval(() => {
-          for (let i = 0; i < specksCreate; i++) {
-            createStar(container);
-          }
+          addStarsToContainer(container, specksCreate);
         }, createInterval);
       } else {
         // If the container leaves the viewport, stop creating stars
