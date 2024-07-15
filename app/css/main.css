@@ -988,7 +988,7 @@ p + p {
 }
 
 /** > 576px **/
-@media (max-height: 52.5rem) {
+@media (max-height: 52.75rem) {
   .profile {
     padding-top: 0.0625rem;
     background-position: center -3.125rem;
