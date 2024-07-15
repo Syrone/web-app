@@ -1,0 +1,14 @@
+/** > 576px **/
+@media (max-width: 36rem) {
+
+}
+
+/** > 380px **/
+@media (max-width: 23.75rem) {
+	.header {
+
+		&-nav {
+			padding-inline: 0;
+		}
+	}
+}

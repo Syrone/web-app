@@ -1,0 +1,58 @@
+.specks {
+	display: block;
+	pointer-events: none;
+	position: absolute;
+	z-index: 1;
+}
+
+.speck {
+	--_size-speck: 1px;
+	--_opacity-speck: .25;
+
+	width: var(--_size-speck);
+	height: var(--_size-speck);
+	display: block;
+	background-color: var(--background-light, #fff);
+	border-radius: 50%;
+	opacity: var(--_opacity-speck);
+	pointer-events: none;
+	position: absolute;
+	z-index: 1;
+	animation: appearSpeck 2s forwards, disappearSpeck 2s forwards 3s;
+	will-change: animation, opacity, left, top;
+	
+	&::after {
+		content: '';
+		width: var(--_size-speck);
+		height: var(--_size-speck);
+		background-color: var(--background-light, #fff);
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		filter: blur(.125rem);
+	}
+}
+
+@keyframes appearSpeck {
+		0% {
+				opacity: 0;
+				transform: scale(0.5);
+		}
+		100% {
+				opacity: var(--_opacity-speck, .25);
+				transform: scale(1);
+		}
+}
+
+@keyframes disappearSpeck {
+		0% {
+				opacity: var(--_opacity-speck, .25);
+				transform: scale(1);
+		}
+		100% {
+				opacity: 0;
+				transform: scale(0.5);
+		}
+}

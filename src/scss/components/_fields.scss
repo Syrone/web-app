@@ -1,0 +1,41 @@
+.field {
+	--_field-width: 100%;
+	--_field-height: 2.5rem;
+	--_field-fs: var(--fs);
+	--_field-fw: 400;
+	--_field-lh: var(--lh-1);
+	--_field-color: var(--text-color);
+	--_field-bg: transparent;
+	--_field-border: .0625rem solid #333;
+	--_field-radius: .5rem;
+	--_field-padding: .25rem 1.25rem;
+	--_field-duration: var(--transition-duration);
+	--_field-type: var(--transition-type);
+
+	--_field-p-fs: var(--fs);
+	--_field-p-fw: 400;
+	--_field-p-lh: var(--lh-1);
+	--_field-p-color: var(--text-color);
+
+	width: var(--_field-width);
+	height: var(--_field-height);
+	font-size: var(--_field-fs);
+	font-weight: var(--_field-fw);
+	line-height: var(--_field-lh);
+	color: var(--_field-color);
+	background-color: var(--_field-bg);
+	border: var(--_field-border);
+	border-radius: var(--_field-radius);
+	padding: var(--_field-padding);
+	outline: none;
+	transition-property: color, background, border;
+	transition-duration: var(--_field-duration);
+	transition-timing-function: var(--_field-type);
+
+	&::placeholder {
+		font-size: var(--_field-p-fs);
+		font-weight: var(--_field-p-fw);
+		line-height: var(--_field-p-lh);
+		color: var(--_field-p-color);
+	}
+}

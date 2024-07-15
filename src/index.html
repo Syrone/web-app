@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="visually-hidden">Главная</h1>
+      <div class="profile">
+        <span class="js-create-specks specks profile-specks" data-specks-create="24"></span>
+
+        <div class="container">
+          <div class="profile-avatar">
+            <span class="js-create-specks specks profile-avatar-specks" data-specks-create="12"></span>
+            <div class="profile-avatar-inner">
+              <picture class="profile-avatar-picture">
+                <source srcset="./img/avatars/avatar-1.webp" type="image/webp">
+                <img loading="lazy" src="./img/avatars/avatar-1.jpg" class="profile-avatar-image" width="65" height="65" alt="Аватарка">
+              </picture>
+            </div>
+          </div>
+
+          <button type="button" class="btn profile-rank">
+            <span class="icon profile-rank-icon">
+              <svg>
+                <use xlink:href="img/icons/star-silver.svg#svg-star-silver"></use>
+              </svg>
+            </span>
+            <span class="profile-rank-content">
+              Silver
+            </span>
+            <span class="icon profile-rank-arrow">
+              <svg>
+                <use xlink:href="img/icons/arrow-right.svg#svg-arrow-right"></use>
+              </svg>
+            </span>
+          </button>
+
+          <div class="profile-balance">
+            <h2 class="h5 profile-balance-title">
+              Баланс
+            </h2>
+            <div class="h1 profile-balance-value">
+              <span>
+                1,250.00
+              </span>
+              <span class="icon profile-balance-icon">
+                <svg>
+                  <use xlink:href="img/icons/star-gold.svg#svg-star-gold"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="profile-game">
+            <span class="profile-game-border"></span>
+            <span class="profile-game-background">
+              <span class="js-create-specks specks specks--blur profile-game-specks" data-specks-create="20"></span>
+            </span>
+            <div class="profile-game-content">
+              <span class="icon profile-game-star">
+                <svg>
+                  <use xlink:href="img/icons/star-gradient.svg#svg-star-gradient"></use>
+                </svg>
+              </span>
+              <h2 class="profile-game-title">
+                Дурак Star
+              </h2>
+              <p class="profile-game-text">
+                <span class="light-color">Присоединяйся</span> к игре <br>
+                в <span class="light-color">дурак</span>, уже сейчас !
+              </p>
+              <button type="button" class="btn btn-light profile-game-btn">
+                Быстрая игра
+              </button>
+            </div>
+          </div>
+
+          <div class="profile-buttons">
+            <button type="button" class="btn btn-puff profile-buttons-btn">
+              <span class="btn-puff-border btn-puff-border--outer"></span>
+              <span class="btn-puff-border btn-puff-border--inner"></span>
+              <span class="btn-puff-background">
+                <span class="btn-puff-glow"></span>
+                <span class="btn-puff-speck specks js-create-specks" data-specks-create="12"></span>
+              </span>
+              <span class="btn-puff-content">
+                Пополнение
+                <span class="btn-puff-content-blur">Пополнение</span>
+              </span>
+            </button>
+            <button type="button" class="btn btn-puff profile-buttons-btn">
+              <span class="btn-puff-border btn-puff-border--outer"></span>
+              <span class="btn-puff-border btn-puff-border--inner"></span>
+              <span class="btn-puff-background">
+                <span class="btn-puff-glow"></span>
+                <span class="btn-puff-speck specks js-create-specks" data-specks-create="12"></span>
+              </span>
+              <span class="btn-puff-content">
+                Вывод
+                <span class="btn-puff-content-blur">Вывод</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

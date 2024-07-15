@@ -1,0 +1,54 @@
+:root {
+  // base
+  --font-family: "Manrope", sans-serif;
+  --content-width: 36rem;
+  --container-offset: 1.25rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  
+  // font-size
+  --h1: 3rem;
+  --h2: 2.5rem;
+  --h3: 2rem;
+  --h4: 1.75rem;
+  --h5: 1.25rem;
+
+  --fs: 1rem;
+  --fs-xxs: .625rem;
+  --fs-xs: .75rem;
+  --fs-sm: .875rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.375rem;
+  --fs-xxl: 1.5rem;
+
+  // line-height
+  --lh: 1.25;
+  --lh-normal: normal;
+  --lh-1: 1;
+  --lh-2: 1.375;
+  --lh-3: 1.5;
+  --lh-4: 1.75;
+  --lh-5: 2;
+
+  // colors
+  --primary-color: #6148ff;
+  --secondary-color: pink;
+  --dark-color: #474A55;
+  --dark-color-v2: #34374F;
+  --light-color: #fff;
+  --gray-light-gradient: linear-gradient(135deg, var(--gray-light-color) 0%, var(--gray-lighter-color) 100%);
+  --gray-light-color: #e9e8ec;
+  --gray-lighter-color: #86838e;
+  --gray-color: #333;
+  --text-color: #fff;
+
+  // background
+  --background-gradient: linear-gradient(180deg, #121215 0%, #0c0c0d 100%);
+  --background-primary-gradient: linear-gradient(135deg, #6148ff 0%, #3a2b99 100%);
+  --background-dark: #1B1A1E;
+  --background-light: #fff;
+
+  // transition
+  --transition-duration: 300ms;
+  --transition-type: ease-in-out;
+}

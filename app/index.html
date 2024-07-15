@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Web App</title>
+  <link rel="preload" href="fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+  <div class="header-background">
+    <div class="container">
+      <nav class="header-nav js-nav-touch" title="header nav">
+        <a href="#left" class="btn btn-puff btn-puff--icon header-nav-link">
+          <span class="btn-puff-border btn-puff-border--outer"></span>
+          <span class="btn-puff-border btn-puff-border--inner"></span>
+          <span class="btn-puff-background">
+            <span class="btn-puff-glow"></span>
+            <span class="btn-puff-speck specks specks--blur js-create-specks" data-specks-create="10"></span>
+          </span>
+          <span class="btn-puff-content">
+            <span class="icon btn-puff-icon">
+              <span class="btn-puff-icon-blur"></span>
+              <svg>
+                <use xlink:href="img/icons/friends-default.svg#svg-friends-default"></use>
+              </svg>
+            </span>
+            <span class="icon btn-puff-icon btn-puff-icon--active">
+              <span class="btn-puff-icon-blur"></span>
+              <span class="btn-puff-icon-blur"></span>
+              <svg>
+                <use xlink:href="img/icons/friends.svg#svg-friends"></use>
+              </svg>
+            </span>
+          </span>
+        </a>
+        <span class="header-nav-gap"></span>
+        <a href="#" class="btn btn-puff btn-puff--icon header-nav-link is-active">
+          <span class="btn-puff-border btn-puff-border--outer"></span>
+          <span class="btn-puff-border btn-puff-border--inner"></span>
+          <span class="btn-puff-background">
+            <span class="btn-puff-glow"></span>
+            <span class="btn-puff-speck specks specks--blur js-create-specks" data-specks-create="10"></span>
+          </span>
+          <span class="btn-puff-content">
+            <span class="icon btn-puff-icon">
+              <span class="btn-puff-icon-blur"></span>
+              <svg>
+                <use xlink:href="img/icons/home-default.svg#svg-home-default"></use>
+              </svg>
+            </span>
+            <span class="icon btn-puff-icon btn-puff-icon--active">
+              <span class="btn-puff-icon-blur"></span>
+              <span class="btn-puff-icon-blur"></span>
+              <svg>
+                <use xlink:href="img/icons/home.svg#svg-home"></use>
+              </svg>
+            </span>
+          </span>
+        </a>
+        <span class="header-nav-gap"></span>
+        <a href="#right" class="btn btn-puff btn-puff--icon header-nav-link">
+          <span class="btn-puff-border btn-puff-border--outer"></span>
+          <span class="btn-puff-border btn-puff-border--inner"></span>
+          <span class="btn-puff-background">
+            <span class="btn-puff-glow"></span>
+            <span class="btn-puff-speck specks specks--blur js-create-specks" data-specks-create="10"></span>
+          </span>
+          <span class="btn-puff-content">
+            <span class="icon btn-puff-icon">
+              <span class="btn-puff-icon-blur"></span>
+              <svg>
+                <use xlink:href="img/icons/network-default.svg#svg-network-default"></use>
+              </svg>
+            </span>
+            <span class="icon btn-puff-icon btn-puff-icon--active">
+              <span class="btn-puff-icon-blur"></span>
+              <span class="btn-puff-icon-blur"></span>
+              <svg>
+                <use xlink:href="img/icons/network.svg#svg-network"></use>
+              </svg>
+            </span>
+          </span>
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <h1 class="visually-hidden">Главная</h1>
+      <div class="profile">
+        <span class="js-create-specks specks profile-specks" data-specks-create="24"></span>
+
+        <div class="container">
+          <div class="profile-avatar">
+            <span class="js-create-specks specks profile-avatar-specks" data-specks-create="12"></span>
+            <div class="profile-avatar-inner">
+              <picture class="profile-avatar-picture">
+                <source srcset="./img/avatars/avatar-1.webp" type="image/webp">
+                <img loading="lazy" src="./img/avatars/avatar-1.jpg" class="profile-avatar-image" width="65" height="65" alt="Аватарка">
+              </picture>
+            </div>
+          </div>
+
+          <button type="button" class="btn profile-rank">
+            <span class="icon profile-rank-icon">
+              <svg>
+                <use xlink:href="img/icons/star-silver.svg#svg-star-silver"></use>
+              </svg>
+            </span>
+            <span class="profile-rank-content">
+              Silver
+            </span>
+            <span class="icon profile-rank-arrow">
+              <svg>
+                <use xlink:href="img/icons/arrow-right.svg#svg-arrow-right"></use>
+              </svg>
+            </span>
+          </button>
+
+          <div class="profile-balance">
+            <h2 class="h5 profile-balance-title">
+              Баланс
+            </h2>
+            <div class="h1 profile-balance-value">
+              <span>
+                1,250.00
+              </span>
+              <span class="icon profile-balance-icon">
+                <svg>
+                  <use xlink:href="img/icons/star-gold.svg#svg-star-gold"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="profile-game">
+            <span class="profile-game-border"></span>
+            <span class="profile-game-background">
+              <span class="js-create-specks specks specks--blur profile-game-specks" data-specks-create="20"></span>
+            </span>
+            <div class="profile-game-content">
+              <span class="icon profile-game-star">
+                <svg>
+                  <use xlink:href="img/icons/star-gradient.svg#svg-star-gradient"></use>
+                </svg>
+              </span>
+              <h2 class="profile-game-title">
+                Дурак Star
+              </h2>
+              <p class="profile-game-text">
+                <span class="light-color">Присоединяйся</span> к игре <br>
+                в <span class="light-color">дурак</span>, уже сейчас!
+              </p>
+              <button type="button" class="btn btn-light profile-game-btn">
+                Быстрая игра
+              </button>
+            </div>
+          </div>
+
+          <div class="profile-buttons">
+            <button type="button" class="btn btn-puff profile-buttons-btn">
+              <span class="btn-puff-border btn-puff-border--outer"></span>
+              <span class="btn-puff-border btn-puff-border--inner"></span>
+              <span class="btn-puff-background">
+                <span class="btn-puff-glow"></span>
+                <span class="btn-puff-speck specks js-create-specks" data-specks-create="12"></span>
+              </span>
+              <span class="btn-puff-content">
+                Пополнение
+                <span class="btn-puff-content-blur">Пополнение</span>
+              </span>
+            </button>
+            <button type="button" class="btn btn-puff profile-buttons-btn">
+              <span class="btn-puff-border btn-puff-border--outer"></span>
+              <span class="btn-puff-border btn-puff-border--inner"></span>
+              <span class="btn-puff-background">
+                <span class="btn-puff-glow"></span>
+                <span class="btn-puff-speck specks js-create-specks" data-specks-create="12"></span>
+              </span>
+              <span class="btn-puff-content">
+                Вывод
+                <span class="btn-puff-content-blur">Вывод</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+  <div class="container"></div>
+</footer>
+
+  </div>
+</body>
+
+</html>
