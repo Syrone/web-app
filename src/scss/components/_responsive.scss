@@ -2,7 +2,12 @@
 @media (max-height: 52.5rem) {
 
 	.profile {
-		padding-top: max(.0625rem, calc(70vh - 30rem));
+		padding-top: .0625rem;
+		background-position: center -3.125rem;
+
+		&-specks {
+			display: none;
+		}
 	}
 
 }
