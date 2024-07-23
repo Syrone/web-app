@@ -13,6 +13,16 @@
 		border-radius: inherit;
 		padding-block: 1.5rem 2rem;
 		overflow: hidden;
+		position: relative;
+	}
+
+	&-specks {
+		width: 11.25rem;
+		height: 5rem;
+		top: 0;
+		right: -3rem;
+		opacity: .25;
+		transform: rotate(36deg);
 	}
 
 	&-nav {

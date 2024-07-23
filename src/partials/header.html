@@ -1,7 +1,8 @@
-<header class="header @if (context.page === 'lobby') {header--lobby}">
+<header class="header @if (context.page === 'lobby' || context.page === 'lobby-empty') {header--lobby}">
   <div class="header-background">
     <div class="container">
       @if (context.page === 'lobby') {
+        <span class="js-create-specks specks header-specks" data-specks-create="8"></span>
         <nav class="header-nav" title="header navigation">
           <button type="button" class="btn btn-puff header-nav-btn">
             <span class="btn-puff-border btn-puff-border--outer"></span>
@@ -13,6 +14,30 @@
             <span class="btn-puff-content">
               Бито
               <span class="btn-puff-content-blur">Бито</span>
+            </span>
+          </button>
+
+          <button type="button" class="btn header-nav-profile" data-graph-path="modal-giveup">
+            <picture class="header-nav-profile-picture">
+              <source srcset="./img/avatars/avatar-3.webp" type="image/webp">
+              <img loading="lazy" src="./img/avatars/avatar-3.png" class="header-nav-profile-image" width="75" height="75" alt="Картинка">
+            </picture>
+          </button>
+        </nav>
+      }
+      @if (context.page === 'lobby-empty') {
+        <span class="js-create-specks specks header-specks" data-specks-create="8"></span>
+        <nav class="header-nav" title="header navigation">
+          <button type="button" class="btn btn-puff header-nav-btn">
+            <span class="btn-puff-border btn-puff-border--outer"></span>
+            <span class="btn-puff-border btn-puff-border--inner"></span>
+            <span class="btn-puff-background">
+              <span class="btn-puff-glow"></span>
+              <span class="btn-puff-speck specks js-create-specks" data-specks-create="8"></span>
+            </span>
+            <span class="btn-puff-content">
+              Готов
+              <span class="btn-puff-content-blur">Готов</span>
             </span>
           </button>
 

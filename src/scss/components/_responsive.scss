@@ -38,4 +38,11 @@
 			}
 		}
 	}
+
+	.lobby {
+
+		&-deck {
+			top: calc(16rem + 30vw);
+		}
+	}
 }
