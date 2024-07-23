@@ -1,21 +1,56 @@
+.form {
+	width: 100%;
+	display: block;
+}
+
+.form-control,
+.form-field {
+	width: 100%;
+	display: block;
+	position: relative;
+}
+
+.form-field--icon {
+
+	.field {
+
+		&:focus,
+		&:not(:placeholder-shown) {
+			--_field-padding: .25rem 1rem .375rem 2rem;
+		}
+	}
+}
+
+.form-field--search {
+
+	.field {
+		--_field-fs: var(--fs-sm);
+		--_field-padding: .25rem 1rem .375rem 2rem;
+	}
+
+	.field-icon {
+		display: block;
+	}
+}
+
 .field {
 	--_field-width: 100%;
-	--_field-height: 2.5rem;
-	--_field-fs: var(--fs);
-	--_field-fw: 400;
+	--_field-height: 2.25rem;
+	--_field-fs: var(--fs-xs);
+	--_field-fw: 500;
 	--_field-lh: var(--lh-1);
-	--_field-color: var(--text-color);
-	--_field-bg: transparent;
-	--_field-border: .0625rem solid #333;
-	--_field-radius: .5rem;
-	--_field-padding: .25rem 1.25rem;
+	--_field-color: #E7E7F3;
+	--_field-bg: #151519;
+	--_field-border: .0625rem solid #151519;
+	--_field-radius: 2rem;
+	--_field-padding: .25rem 1rem .375rem;
 	--_field-duration: var(--transition-duration);
 	--_field-type: var(--transition-type);
 
-	--_field-p-fs: var(--fs);
-	--_field-p-fw: 400;
+	--_field-p-fs: var(--_field-fs);
+	--_field-p-fw: var(--_field-fw);
 	--_field-p-lh: var(--lh-1);
-	--_field-p-color: var(--text-color);
+	--_field-p-color: #2E2E36;
 
 	width: var(--_field-width);
 	height: var(--_field-height);
@@ -38,4 +73,28 @@
 		line-height: var(--_field-p-lh);
 		color: var(--_field-p-color);
 	}
+
+	&:focus,
+	&:not(:placeholder-shown) {
+
+		&::placeholder {
+			color: transparent;
+		}
+
+		~ .field-icon {
+			display: block;
+		}
+	}
+}
+
+.field-icon {
+	--_i-size: .75rem;
+	--_i-color: #31313A;
+
+	display: none;
+	pointer-events: none;
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	transform: translateY(-50%);
 }

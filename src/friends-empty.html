@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html', {
+      "page": "friends"
+    })
+    <main class="main">
+      <h1 class="visually-hidden">Мои друзья</h1>
+      @include('partials/loading.html')
+      <div class="block offset-top">
+        <div class="container">
+          <form class="form form--search">
+            <div class="form-control">
+              <div class="form-field form-field--search">
+                <input type="text" class="field" name="search" placeholder="Поиск">
+                <span class="icon field-icon">
+                  <svg id="svg-search" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.347656 4.66797C0.347656 2.08984 2.44531 -0.0078125 5.02344 -0.0078125C7.60156 -0.0078125 9.69922 2.08984 9.69922 4.66797C9.69922 5.73438 9.3418 6.71289 8.73828 7.49805L11.6035 10.3809C11.7266 10.5039 11.7969 10.6738 11.7969 10.8613C11.7969 11.2539 11.5215 11.5527 11.123 11.5527C10.9355 11.5527 10.7598 11.4883 10.625 11.3535L7.74219 8.46484C6.97461 9.01562 6.04297 9.34375 5.02344 9.34375C2.44531 9.34375 0.347656 7.24609 0.347656 4.66797ZM1.34961 4.66797C1.34961 6.69531 2.99609 8.3418 5.02344 8.3418C7.05078 8.3418 8.69727 6.69531 8.69727 4.66797C8.69727 2.64062 7.05078 0.994141 5.02344 0.994141C2.99609 0.994141 1.34961 2.64062 1.34961 4.66797Z" fill="currentColor"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </form>
+
+          <div class="block-empty"> У вас нет друзей ( </div>
+        </div>
+      </div>
+      @include('partials/modals.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

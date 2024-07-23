@@ -3,13 +3,18 @@
 @import "fonts";
 @import "settings";
 
+@import "./components/loading";
 @import "./components/container";
 @import "./components/typography";
+@import "./components/icons";
 @import "./components/buttons";
 @import "./components/fields";
-@import "./components/icons";
 @import "./components/speck";
 @import "./components/utilities";
+@import "./components/modals";
 @import "./components/header";
 @import "./components/profile";
+@import "./components/block";
+@import "./components/lobby";
+@import "./components/card";
 @import "./components/responsive";

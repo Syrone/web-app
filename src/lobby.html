@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru" class="page dis-scroll">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html', {
+      "page": "lobby"
+    })
+    <main class="main">
+      <h1 class="visually-hidden">Заголовок</h1>
+      @include('partials/loading.html')
+      
+      <div class="lobby">
+        <div class="lobby-background">
+          <div class="lobby-content">
+            <div class="container">
+              @include('partials/card.html', {
+                "card": {
+                  "type": "hearts",
+                  "current": "j"
+                }
+              })
+            </div>
+          </div>
+        </div>
+      </div>
+      @include('partials/modals.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

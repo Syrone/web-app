@@ -38,3 +38,19 @@ if (nav) {
 		}
 	});
 }
+
+const navLinks = document.querySelectorAll('.header-nav-link');
+
+navLinks?.forEach(link => {
+	// Check if the link has the class 'is-active'
+	if (link.classList.contains('is-active')) {
+		// Get the previous sibling of the link
+		const prevSibling = link.previousElementSibling;
+		
+		// Check if the previous sibling exists and has the class 'header-nav-gap'
+		if (prevSibling && prevSibling.classList.contains('header-nav-gap')) {
+			// Add the class 'header-nav-gap--active' to the previous sibling
+			prevSibling.classList.add('header-nav-gap--active');
+		}
+	}
+});

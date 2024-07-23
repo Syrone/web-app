@@ -1,6 +1,11 @@
 /** > 576px **/
 @media (max-height: 52.5rem) {
 
+	.offset-top {
+		margin-top: 1.25rem;
+		padding-top: 0;
+	}
+
 	.profile {
 		padding-top: .0625rem;
 		background-position: center -3.125rem;
@@ -24,6 +29,13 @@
 
 		&-nav {
 			padding-inline: 0;
+		}
+
+		&--lobby {
+
+			.header-nav {
+				gap: 1.25rem;
+			}
 		}
 	}
 }

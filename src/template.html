@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru" class="page dis-scroll">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html', {
+      "page": "home"
+    })
+    <main class="main">
+      <h1 class="visually-hidden">Заголовок</h1>
+      @include('partials/loading.html')
+      
+      @include('partials/modals.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

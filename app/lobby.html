@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru" class="page dis-scroll">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Web App</title>
+  <link rel="preload" href="fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header header--lobby">
+  <div class="header-background">
+    <div class="container">
+
+        <nav class="header-nav" title="header navigation">
+          <button type="button" class="btn btn-puff header-nav-btn">
+            <span class="btn-puff-border btn-puff-border--outer"></span>
+            <span class="btn-puff-border btn-puff-border--inner"></span>
+            <span class="btn-puff-background">
+              <span class="btn-puff-glow"></span>
+              <span class="btn-puff-speck specks js-create-specks" data-specks-create="8"></span>
+            </span>
+            <span class="btn-puff-content">
+              Бито
+              <span class="btn-puff-content-blur">Бито</span>
+            </span>
+          </button>
+
+          <button type="button" class="btn header-nav-profile" data-graph-path="modal-giveup">
+            <picture class="header-nav-profile-picture">
+              <source srcset="./img/avatars/avatar-3.webp" type="image/webp">
+              <img loading="lazy" src="./img/avatars/avatar-3.png" class="header-nav-profile-image" width="75" height="75" alt="Картинка">
+            </picture>
+          </button>
+        </nav>
+
+    </div>
+  </div>
+</header>
+    <main class="main">
+      <h1 class="visually-hidden">Заголовок</h1>
+      <div class="loading">
+    <picture class="loading-picture">
+        <img loading="lazy" src="./loading.gif" class="loading-image" width="200" height="200" alt="Утка">
+    </picture>
+</div>
+
+      <div class="lobby">
+        <div class="lobby-background">
+          <div class="lobby-content">
+            <div class="container">
+              <div class="card card--inverse ">
+    <div class="card-inner">
+        <div class="card-face card-front">
+            <div class="card-current">
+                <div class="card-current-value">
+                    j
+                </div>
+                <span class="icon card-current-icon">
+
+                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.479 6.72081C12.1596 6.21003 12.5999 5.39642 12.5999 4.47999C12.5999 2.93357 11.3463 1.67999 9.7999 1.67999C8.25351 1.67999 6.9999 2.93357 6.9999 4.47999C6.9999 2.93357 5.74629 1.67999 4.1999 1.67999C2.65351 1.67999 1.3999 2.93357 1.3999 4.47999C1.3999 5.39642 1.84017 6.21003 2.52076 6.72081C2.84875 7.04873 3.26881 7.40427 3.71985 7.78592C5.19446 9.03389 6.9999 10.5619 6.9999 12.32C6.9999 10.4788 8.43401 9.3035 9.91673 8.08834C10.453 7.64886 10.9956 7.20411 11.479 6.72081Z" fill="url(#paint0_linear_326_44062)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_326_44062" x1="0.999878" y1="2.00006" x2="12.9999" y2="12.0001" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FF7A7A"/>
+                            <stop offset="1" stop-color="#841F1F"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+
+                </span>
+            </div>
+
+            <span class="icon card-icon">
+
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32.7976 19.2023C34.7421 17.743 36 15.4183 36 12.8C36 8.38163 32.4183 4.79999 28 4.79999C23.5817 4.79999 20 8.38163 20 12.8C20 8.38163 16.4183 4.79999 12 4.79999C7.58174 4.79999 4 8.38163 4 12.8C4 15.4183 5.25791 17.743 7.20244 19.2023C8.13955 20.1392 9.33975 21.1551 10.6284 22.2455C14.8416 25.8111 20 30.1767 20 35.2C20 29.9394 24.0975 26.5814 28.3338 23.1096C29.866 21.8539 31.4163 20.5832 32.7976 19.2023Z" fill="url(#paint0_linear_2022_1212)"/>
+                        <path d="M17 4V4C18.2883 4.64417 19.2955 5.73875 19.8305 7.07614L20 7.5L20.1695 7.07614C20.7045 5.73875 21.7117 4.64417 23 4V4" stroke="url(#paint1_linear_2022_1212)" stroke-width="0.5" stroke-linecap="round"/>
+                        <path d="M18 3L18.5697 3.37983C19.1793 3.78623 19.6723 4.34469 20 5V5V5C20.3277 4.34469 20.8207 3.78623 21.4303 3.37983L22 3" stroke="url(#paint2_linear_2022_1212)" stroke-width="0.5" stroke-linecap="round"/>
+                        <path d="M29 29L27 27" stroke="url(#paint3_linear_2022_1212)" stroke-width="0.5" stroke-linecap="round"/>
+                        <path d="M26.5 29.5L26 28" stroke="url(#paint4_linear_2022_1212)" stroke-width="0.5" stroke-linecap="round"/>
+                        <path d="M29.5 26.5L28 26" stroke="url(#paint5_linear_2022_1212)" stroke-width="0.5" stroke-linecap="round"/>
+                        <path d="M10.5 29L12.5 27" stroke="url(#paint6_linear_2022_1212)" stroke-width="0.5" stroke-linecap="round"/>
+                        <path d="M10 26.5L11.5 26" stroke="url(#paint7_linear_2022_1212)" stroke-width="0.5" stroke-linecap="round"/>
+                        <path d="M13 29.5L13.5 28" stroke="url(#paint8_linear_2022_1212)" stroke-width="0.5" stroke-linecap="round"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_2022_1212" x1="2.85707" y1="5.71447" x2="37.1428" y2="34.2859" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF7A7A"/>
+                        <stop offset="1" stop-color="#841F1F"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_2022_1212" x1="20" y1="4" x2="20" y2="7.5" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF7A7A" stop-opacity="0"/>
+                        <stop offset="1" stop-color="#FF7A7A"/>
+                        </linearGradient>
+                        <linearGradient id="paint2_linear_2022_1212" x1="20" y1="3" x2="20" y2="5" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF7A7A" stop-opacity="0"/>
+                        <stop offset="1" stop-color="#FF7A7A"/>
+                        </linearGradient>
+                        <linearGradient id="paint3_linear_2022_1212" x1="27" y1="27" x2="29" y2="29" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF7A7A"/>
+                        <stop offset="1" stop-color="#FF7A7A" stop-opacity="0"/>
+                        </linearGradient>
+                        <linearGradient id="paint4_linear_2022_1212" x1="26" y1="28" x2="26.5" y2="29.5" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF7A7A"/>
+                        <stop offset="1" stop-color="#FF7A7A" stop-opacity="0"/>
+                        </linearGradient>
+                        <linearGradient id="paint5_linear_2022_1212" x1="28" y1="26" x2="29.5" y2="26.5" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF7A7A"/>
+                        <stop offset="1" stop-color="#FF7A7A" stop-opacity="0"/>
+                        </linearGradient>
+                        <linearGradient id="paint6_linear_2022_1212" x1="12.5" y1="27" x2="10.5" y2="29" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF7A7A"/>
+                        <stop offset="1" stop-color="#FF7A7A" stop-opacity="0"/>
+                        </linearGradient>
+                        <linearGradient id="paint7_linear_2022_1212" x1="11.5" y1="26" x2="10" y2="26.5" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF7A7A"/>
+                        <stop offset="1" stop-color="#FF7A7A" stop-opacity="0"/>
+                        </linearGradient>
+                        <linearGradient id="paint8_linear_2022_1212" x1="13.5" y1="28" x2="13" y2="29.5" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF7A7A"/>
+                        <stop offset="1" stop-color="#FF7A7A" stop-opacity="0"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+
+            </span>
+        </div>
+        <div class="card-face card-back">
+            <span class="icon card-back-icon">
+                <svg viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_64_3067)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.18 8.12678L2.94251 9.40611C2.70985 9.53911 2.4057 9.47091 2.26318 9.25378C2.19357 9.14771 2.17282 9.01991 2.20563 8.89938L2.55199 7.62698C2.67702 7.16765 3.01378 6.78371 3.47152 6.57859L5.9125 5.48475C6.0263 5.43376 6.07427 5.30632 6.01963 5.20011C5.97538 5.11409 5.87532 5.06595 5.77458 5.08223L3.05745 5.52127C2.50513 5.61052 1.93872 5.46817 1.50908 5.13213L0.65072 4.46075C0.441601 4.29719 0.414143 4.00637 0.589391 3.81119C0.674625 3.71626 0.797194 3.65733 0.929491 3.64767L3.55205 3.45611C3.73733 3.44257 3.89879 3.33314 3.96992 3.17289L4.98165 0.893446C5.08608 0.658181 5.37507 0.546469 5.62714 0.64393C5.74817 0.690726 5.84433 0.78048 5.89447 0.893446L6.90621 3.17289C6.97733 3.33314 7.1388 3.44257 7.32408 3.45611L9.96107 3.64872C10.2331 3.66859 10.4363 3.8905 10.415 4.14438C10.4048 4.26651 10.3429 4.37981 10.243 4.45929L8.23193 6.0595C8.09029 6.17215 8.02857 6.34948 8.07207 6.5183L8.69036 8.91551C8.75422 9.16311 8.59093 9.41211 8.32572 9.47171C8.19822 9.50038 8.06379 9.48051 7.952 9.41658L5.69613 8.12678C5.53776 8.03625 5.33836 8.03625 5.18 8.12678Z" fill="url(#paint0_linear_64_3067)"/>
+                    </g>
+                    <defs>
+                    <linearGradient id="paint0_linear_64_3067" x1="0.43809" y1="0.799963" x2="10.0642" y2="9.99155" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#C6C7CF"/>
+                    <stop offset="1" stop-color="#6C6E7E"/>
+                    </linearGradient>
+                    <clipPath id="clip0_64_3067">
+                    <rect width="10" height="10" fill="white" transform="translate(0.43811)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </span>
+        </div>
+    </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="graph-modal">
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-user">
+        <div class="graph-modal__content">
+            <div class="graph-modal__header">
+                <div class="profile profile--modal">
+                    <div class="profile-avatar">
+                        <div class="profile-avatar-inner">
+                            <picture class="profile-avatar-picture">
+                                <source srcset="./img/avatars/avatar-1.webp" type="image/webp">
+                                <img loading="lazy" src="./img/avatars/avatar-1.jpg" class="profile-avatar-image" width="65" height="65"
+									alt="Аватарка">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="profile-info">
+                        <div class="profile-info-name">
+                            UserName
+                        </div>
+                        <div class="profile-info-id">
+                            ID 248023217
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-dark js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="img/icons/close.svg#svg-close"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+
+            <div class="graph-modal__body">
+                <div class="profile-balance profile-balance--modal">
+                    <div class="profile-balance-content">
+                        <h2 class="profile-balance-title">
+                            Основной баланс
+                        </h2>
+                        <div class="profile-balance-value">
+                            <span>
+                                1,250.00
+                            </span>
+                            <span class="icon profile-balance-icon">
+                                <svg id="svg-star-gold" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_64_3074)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+											d="M15.6123 26.8184L8.45234 31.0402C7.70784 31.4791 6.73456 31.2541 6.27849 30.5375C6.05572 30.1875 5.98932 29.7658 6.09431 29.368L7.20267 25.1691C7.60276 23.6533 8.68041 22.3863 10.1452 21.7094L17.9563 18.0998C18.3205 17.9315 18.474 17.5109 18.2991 17.1604C18.1575 16.8766 17.8373 16.7177 17.515 16.7714L8.82016 18.2203C7.05271 18.5148 5.2402 18.045 3.86537 16.9361L1.11861 14.7206C0.449427 14.1808 0.36156 13.2211 0.922355 12.577C1.19511 12.2637 1.58732 12.0692 2.01068 12.0374L10.4029 11.4052C10.9957 11.3606 11.5124 10.9994 11.74 10.4706L14.9776 2.94844C15.3117 2.17206 16.2365 1.80341 17.0432 2.12503C17.4304 2.27946 17.7382 2.57565 17.8986 2.94844L21.1362 10.4706C21.3638 10.9994 21.8805 11.3606 22.4733 11.4052L30.9117 12.0408C31.7821 12.1064 32.4324 12.8387 32.3643 13.6765C32.3316 14.0795 32.1335 14.4534 31.8139 14.7157L25.3785 19.9964C24.9252 20.3682 24.7277 20.9533 24.8669 21.5105L26.8455 29.4213C27.0498 30.2383 26.5273 31.06 25.6786 31.2567C25.2706 31.3513 24.8404 31.2858 24.4827 31.0748L17.2639 26.8184C16.7571 26.5197 16.1191 26.5197 15.6123 26.8184Z"
+											fill="url(#paint0_linear_64_3074)" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_64_3074" x1="0.43811" y1="2.06254" x2="33.2884" y2="29.9355"
+											gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FFDA7B" />
+                                            <stop offset="1" stop-color="#FFA800" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_64_3074">
+                                            <rect width="32" height="33" fill="white" transform="translate(0.43811)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-balance profile-balance--modal">
+                    <div class="profile-balance-content">
+                        <h2 class="profile-balance-title">
+                            Реферальный баланс
+                        </h2>
+                        <div class="profile-balance-value">
+                            <span>
+                                123.00
+                            </span>
+                            <span class="icon profile-balance-icon">
+                                <svg id="svg-star-silver" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_64_3067)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.18 8.12678L2.94251 9.40611C2.70985 9.53911 2.4057 9.47091 2.26318 9.25378C2.19357 9.14771 2.17282 9.01991 2.20563 8.89938L2.55199 7.62698C2.67702 7.16765 3.01378 6.78371 3.47152 6.57859L5.9125 5.48475C6.0263 5.43376 6.07427 5.30632 6.01963 5.20011C5.97538 5.11409 5.87532 5.06595 5.77458 5.08223L3.05745 5.52127C2.50513 5.61052 1.93872 5.46817 1.50908 5.13213L0.65072 4.46075C0.441601 4.29719 0.414143 4.00637 0.589391 3.81119C0.674625 3.71626 0.797194 3.65733 0.929491 3.64767L3.55205 3.45611C3.73733 3.44257 3.89879 3.33314 3.96992 3.17289L4.98165 0.893446C5.08608 0.658181 5.37507 0.546469 5.62714 0.64393C5.74817 0.690726 5.84433 0.78048 5.89447 0.893446L6.90621 3.17289C6.97733 3.33314 7.1388 3.44257 7.32408 3.45611L9.96107 3.64872C10.2331 3.66859 10.4363 3.8905 10.415 4.14438C10.4048 4.26651 10.3429 4.37981 10.243 4.45929L8.23193 6.0595C8.09029 6.17215 8.02857 6.34948 8.07207 6.5183L8.69036 8.91551C8.75422 9.16311 8.59093 9.41211 8.32572 9.47171C8.19822 9.50038 8.06379 9.48051 7.952 9.41658L5.69613 8.12678C5.53776 8.03625 5.33836 8.03625 5.18 8.12678Z" fill="url(#paint0_linear_64_3067)"/>
+                                    </g>
+                                    <defs>
+                                    <linearGradient id="paint0_linear_64_3067" x1="0.43809" y1="0.799963" x2="10.0642" y2="9.99155" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#C6C7CF"/>
+                                    <stop offset="1" stop-color="#6C6E7E"/>
+                                    </linearGradient>
+                                    <clipPath id="clip0_64_3067">
+                                    <rect width="10" height="10" fill="white" transform="translate(0.43811)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-xs btn-primary" disabled>
+                        Вывести
+                    </button>
+                </div>
+
+                <div class="profile-detail">
+                    <div class="profile-detail-name">
+                        Количество
+                        Сыгранных партий
+                    </div>
+                    <div class="profile-detail-value">
+                        256
+                    </div>
+                </div>
+                <div class="profile-detail">
+                    <div class="profile-detail-name">
+                        Количество
+                        Выигранных партий
+                    </div>
+                    <div class="profile-detail-value">
+                        132
+                    </div>
+                </div>
+                <div class="profile-detail">
+                    <div class="profile-detail-name">
+                        Количество
+                        Сыгранных партий
+                    </div>
+                    <div class="profile-detail-value">
+                        <span class="icon profile-detail-icon">
+                            <svg id="svg-star-gold" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_64_3074)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+										d="M15.6123 26.8184L8.45234 31.0402C7.70784 31.4791 6.73456 31.2541 6.27849 30.5375C6.05572 30.1875 5.98932 29.7658 6.09431 29.368L7.20267 25.1691C7.60276 23.6533 8.68041 22.3863 10.1452 21.7094L17.9563 18.0998C18.3205 17.9315 18.474 17.5109 18.2991 17.1604C18.1575 16.8766 17.8373 16.7177 17.515 16.7714L8.82016 18.2203C7.05271 18.5148 5.2402 18.045 3.86537 16.9361L1.11861 14.7206C0.449427 14.1808 0.36156 13.2211 0.922355 12.577C1.19511 12.2637 1.58732 12.0692 2.01068 12.0374L10.4029 11.4052C10.9957 11.3606 11.5124 10.9994 11.74 10.4706L14.9776 2.94844C15.3117 2.17206 16.2365 1.80341 17.0432 2.12503C17.4304 2.27946 17.7382 2.57565 17.8986 2.94844L21.1362 10.4706C21.3638 10.9994 21.8805 11.3606 22.4733 11.4052L30.9117 12.0408C31.7821 12.1064 32.4324 12.8387 32.3643 13.6765C32.3316 14.0795 32.1335 14.4534 31.8139 14.7157L25.3785 19.9964C24.9252 20.3682 24.7277 20.9533 24.8669 21.5105L26.8455 29.4213C27.0498 30.2383 26.5273 31.06 25.6786 31.2567C25.2706 31.3513 24.8404 31.2858 24.4827 31.0748L17.2639 26.8184C16.7571 26.5197 16.1191 26.5197 15.6123 26.8184Z"
+										fill="url(#paint0_linear_64_3074)" />
+                                </g>
+                                <defs>
+                                    <linearGradient id="paint0_linear_64_3074" x1="0.43811" y1="2.06254" x2="33.2884" y2="29.9355"
+										gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FFDA7B" />
+                                        <stop offset="1" stop-color="#FFA800" />
+                                    </linearGradient>
+                                    <clipPath id="clip0_64_3074">
+                                        <rect width="32" height="33" fill="white" transform="translate(0.43811)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                        10,000.00
+                    </div>
+                </div>
+            </div>
+
+            <div class="graph-modal__footer">
+                <div class="graph-modal__referral">
+                    <span class="graph-modal__referral-hint">
+                        *Нажмите, чтобы скопировать
+                    </span>
+                    <button type="button" class="btn btn-sm btn-dark graph-modal__referral-btn">
+                        Реферальная ссылка
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-result">
+        <div class="graph-modal__content">
+            <div class="graph-modal__body">
+                <div class="profile-balance profile-balance--result">
+                    <div class="profile-balance-value">
+                        <span>
+                            250
+                        </span>
+                        <span class="icon profile-balance-icon">
+                            <svg id="svg-star-gold" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_64_3074)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+										d="M15.6123 26.8184L8.45234 31.0402C7.70784 31.4791 6.73456 31.2541 6.27849 30.5375C6.05572 30.1875 5.98932 29.7658 6.09431 29.368L7.20267 25.1691C7.60276 23.6533 8.68041 22.3863 10.1452 21.7094L17.9563 18.0998C18.3205 17.9315 18.474 17.5109 18.2991 17.1604C18.1575 16.8766 17.8373 16.7177 17.515 16.7714L8.82016 18.2203C7.05271 18.5148 5.2402 18.045 3.86537 16.9361L1.11861 14.7206C0.449427 14.1808 0.36156 13.2211 0.922355 12.577C1.19511 12.2637 1.58732 12.0692 2.01068 12.0374L10.4029 11.4052C10.9957 11.3606 11.5124 10.9994 11.74 10.4706L14.9776 2.94844C15.3117 2.17206 16.2365 1.80341 17.0432 2.12503C17.4304 2.27946 17.7382 2.57565 17.8986 2.94844L21.1362 10.4706C21.3638 10.9994 21.8805 11.3606 22.4733 11.4052L30.9117 12.0408C31.7821 12.1064 32.4324 12.8387 32.3643 13.6765C32.3316 14.0795 32.1335 14.4534 31.8139 14.7157L25.3785 19.9964C24.9252 20.3682 24.7277 20.9533 24.8669 21.5105L26.8455 29.4213C27.0498 30.2383 26.5273 31.06 25.6786 31.2567C25.2706 31.3513 24.8404 31.2858 24.4827 31.0748L17.2639 26.8184C16.7571 26.5197 16.1191 26.5197 15.6123 26.8184Z"
+										fill="url(#paint0_linear_64_3074)" />
+                                </g>
+                                <defs>
+                                    <linearGradient id="paint0_linear_64_3074" x1="0.43811" y1="2.06254" x2="33.2884" y2="29.9355"
+										gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FFDA7B" />
+                                        <stop offset="1" stop-color="#FFA800" />
+                                    </linearGradient>
+                                    <clipPath id="clip0_64_3074">
+                                        <rect width="32" height="33" fill="white" transform="translate(0.43811)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="graph-modal__footer">
+                <button type="button" class="btn btn-md btn-primary graph-modal__submit js-modal-close">
+                    Подтвердить
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-refill">
+        <form class="graph-modal__content form">
+            <div class="graph-modal__body">
+                <div class="form-control">
+                    <div class="form-field form-field--icon">
+                        <input type="text" class="field" name="refill" placeholder="Введите количество Star для пополнения" required>
+                        <span class="icon field-icon">
+                            <svg>
+                                <svg id="svg-star" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_326_18584)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.69029 9.75216L3.00531 11.2874C2.72612 11.447 2.36114 11.3651 2.19011 11.1046C2.10657 10.9773 2.08167 10.8239 2.12104 10.6793L2.53668 9.1524C2.68671 8.6012 3.09083 8.14048 3.64011 7.89433L6.5693 6.58173C6.70586 6.52054 6.76341 6.36761 6.69785 6.24015C6.64475 6.13693 6.52467 6.07917 6.40379 6.0987L3.14324 6.62555C2.48044 6.73265 1.80075 6.56182 1.28519 6.15858L0.255157 5.35293C0.00421306 5.15665 -0.0287368 4.80766 0.181561 4.57346C0.283843 4.45954 0.430925 4.38882 0.589681 4.37722L3.73675 4.14735C3.95908 4.13111 4.15284 3.99979 4.23819 3.8075L5.45228 1.07216C5.57758 0.789842 5.92437 0.655787 6.22686 0.77274C6.37209 0.828896 6.48749 0.9366 6.54766 1.07216L7.76175 3.8075C7.84709 3.99979 8.04085 4.13111 8.26318 4.14735L11.4276 4.37849C11.754 4.40233 11.9978 4.66862 11.9723 4.97328C11.96 5.11983 11.8857 5.2558 11.7659 5.35117L9.35261 7.27142C9.18264 7.40661 9.10858 7.6194 9.16078 7.82198L9.90273 10.6986C9.97935 10.9958 9.78341 11.2946 9.46515 11.3661C9.31215 11.4005 9.15084 11.3766 9.0167 11.2999L6.30965 9.75216C6.11961 9.64352 5.88033 9.64352 5.69029 9.75216Z" fill="currentColor"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_326_18584">
+                                    <rect width="12" height="12" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="graph-modal__footer">
+                <button type="button" class="btn btn-md btn-primary form-submit graph-modal__submit" disabled data-graph-path="modal-result">
+                    Пополнить
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-output">
+        <form class="graph-modal__content form">
+            <div class="graph-modal__body">
+                <div class="form-control">
+                    <div class="form-field form-field--icon">
+                        <input type="text" class="field" name="refill" placeholder="Введите количество Star для пополнения" required>
+                        <span class="icon field-icon">
+                            <svg>
+                                <svg id="svg-star" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_326_18584)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.69029 9.75216L3.00531 11.2874C2.72612 11.447 2.36114 11.3651 2.19011 11.1046C2.10657 10.9773 2.08167 10.8239 2.12104 10.6793L2.53668 9.1524C2.68671 8.6012 3.09083 8.14048 3.64011 7.89433L6.5693 6.58173C6.70586 6.52054 6.76341 6.36761 6.69785 6.24015C6.64475 6.13693 6.52467 6.07917 6.40379 6.0987L3.14324 6.62555C2.48044 6.73265 1.80075 6.56182 1.28519 6.15858L0.255157 5.35293C0.00421306 5.15665 -0.0287368 4.80766 0.181561 4.57346C0.283843 4.45954 0.430925 4.38882 0.589681 4.37722L3.73675 4.14735C3.95908 4.13111 4.15284 3.99979 4.23819 3.8075L5.45228 1.07216C5.57758 0.789842 5.92437 0.655787 6.22686 0.77274C6.37209 0.828896 6.48749 0.9366 6.54766 1.07216L7.76175 3.8075C7.84709 3.99979 8.04085 4.13111 8.26318 4.14735L11.4276 4.37849C11.754 4.40233 11.9978 4.66862 11.9723 4.97328C11.96 5.11983 11.8857 5.2558 11.7659 5.35117L9.35261 7.27142C9.18264 7.40661 9.10858 7.6194 9.16078 7.82198L9.90273 10.6986C9.97935 10.9958 9.78341 11.2946 9.46515 11.3661C9.31215 11.4005 9.15084 11.3766 9.0167 11.2999L6.30965 9.75216C6.11961 9.64352 5.88033 9.64352 5.69029 9.75216Z" fill="currentColor"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_326_18584">
+                                    <rect width="12" height="12" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="graph-modal__footer">
+                <button type="button" class="btn btn-md btn-primary form-submit graph-modal__submit" disabled data-graph-path="modal-result">
+                    Вывести
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-remove-friend">
+        <div class="graph-modal__content">
+            <div class="graph-modal__body">
+                <p class="graph-modal__text">
+                    Вы действительно хотите <br>
+                    убрать из друзей «Имя пользователя»?
+                </p>
+            </div>
+
+            <div class="graph-modal__footer">
+                <button type="button" class="btn btn-md btn-primary graph-modal__submit js-modal-close">
+                    Подтвердить
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-join-lobby">
+        <div class="graph-modal__content">
+            <div class="graph-modal__body">
+                <p class="graph-modal__text">
+                    Игрок «Имя пользователя» приглашает вас присоединиться к Лобби
+                </p>
+            </div>
+
+            <div class="graph-modal__footer">
+                <button type="button" class="btn btn-md btn-primary graph-modal__submit js-modal-close">
+                    Присоединиться
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-giveup">
+        <div class="graph-modal__content">
+            <div class="graph-modal__body">
+                <p class="graph-modal__text">
+                    Вы действительно хотите Сдаться? <br>
+                    В таком случае вы автоматически проиграете.
+                </p>
+            </div>
+
+            <div class="graph-modal__footer">
+                <a href="./index.html" class="btn btn-md btn-primary graph-modal__submit js-modal-close">
+                    Подтвердить
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+    <footer class="footer">
+  <div class="container"></div>
+</footer>
+
+  </div>
+</body>
+
+</html>

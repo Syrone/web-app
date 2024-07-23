@@ -1,0 +1,17 @@
+.lobby {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: flex-end;
+	flex: 1;
+	overflow: hidden;
+
+	&-background {
+		padding-top: 15rem;
+		background-image: url(../img/background/lobby-grid.webp);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center top;
+	}
+}

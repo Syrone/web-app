@@ -42,10 +42,10 @@ a {
   flex-direction: column;
   background: var(--background-gradient, #121215);
   background-size: cover;
-  overflow: hidden;
 }
 
 .main {
+  display: flex;
   flex: 1;
   padding-bottom: var(--header-height);
 }

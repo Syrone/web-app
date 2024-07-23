@@ -5,9 +5,12 @@
 
 <body class="page__body">
   <div class="site-container">
-    @include('partials/header.html')
+    @include('partials/header.html', {
+      "page": "home"
+    })
     <main class="main">
       <h1 class="visually-hidden">Главная</h1>
+      @include('partials/loading.html')
       <div class="profile">
         <span class="js-create-specks specks profile-specks" data-specks-create="20"></span>
 
@@ -23,7 +26,7 @@
             </div>
           </div>
 
-          <button type="button" class="btn profile-rank">
+          <button type="button" class="btn profile-rank" data-graph-path="modal-user">
             <span class="icon profile-rank-icon">
               <svg id="svg-star-silver" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_64_3067)">
@@ -153,7 +156,7 @@
           </div>
 
           <div class="profile-buttons">
-            <button type="button" class="btn btn-puff profile-buttons-btn">
+            <button type="button" class="btn btn-puff profile-buttons-btn" data-graph-path="modal-refill">
               <span class="btn-puff-border btn-puff-border--outer"></span>
               <span class="btn-puff-border btn-puff-border--inner"></span>
               <span class="btn-puff-background">
@@ -165,7 +168,7 @@
                 <span class="btn-puff-content-blur">Пополнение</span>
               </span>
             </button>
-            <button type="button" class="btn btn-puff profile-buttons-btn">
+            <button type="button" class="btn btn-puff profile-buttons-btn" data-graph-path="modal-output">
               <span class="btn-puff-border btn-puff-border--outer"></span>
               <span class="btn-puff-border btn-puff-border--inner"></span>
               <span class="btn-puff-background">
@@ -180,6 +183,8 @@
           </div>
         </div>
       </div>
+
+      @include('partials/modals.html')
     </main>
     @include('partials/footer.html')
   </div>

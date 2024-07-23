@@ -1,0 +1,68 @@
+.graph-modal {
+	backdrop-filter: blur(3.125rem);
+	z-index: 1080;
+
+	&__container {
+		background-color: transparent;
+		background: linear-gradient(135deg, #101013 0%, #303039 50%, #101013 100%);
+		margin-block: 2.5rem;
+		border-radius: 1.5rem;
+		padding: .0625rem;
+	}
+
+	&__content,
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	&__content {
+		background-color: #101013;
+		border-radius: inherit;
+		padding: 1.1875rem;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		gap: .5rem .75rem;
+	}
+
+	&__close {
+		--_color: #48484E;
+
+		--_icon-size: .625rem;
+
+		min-height: auto;
+		align-self: start;
+		margin-left: auto;
+		background-image: none;
+		border-radius: 50%;
+		padding: .25rem;
+		position: static;
+	}
+
+	&__text {
+		font-size: var(--fs-sm);
+		font-weight: 500;
+		color: #50505A;
+	}
+
+	&__referral {
+		width: fit-content;
+		display: flex;
+		flex-direction: column;
+		gap: .25rem;
+
+		&-hint {
+			font-size: .5rem;
+			font-weight: 500;
+			color: #2e2e35;
+		}
+	}
+
+	&__submit {
+		width: 100%;
+	}
+}
