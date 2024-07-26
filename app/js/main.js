@@ -462,8 +462,17 @@ document.querySelectorAll('.js-create-specks').forEach(container => {
 
 function handleNumberInput(event) {
   const input = event.target;
-  // Используем регулярное выражение для фильтрации ввода
-  input.value = input.value.replace(/[^0-9]/g, '');
+  // Получаем текущее значение и удаляем все недопустимые символы
+  let value = input.value;
+  // Разрешаем только цифры и одну десятичную точку
+  value = value.replace(/[^0-9.]/g, '');
+
+  // Разрешаем только одну десятичную точку
+  const parts = value.split('.');
+  if (parts.length > 2) {
+    value = parts[0] + '.' + parts.slice(1).join('');
+  }
+  input.value = value;
 }
 
 // Получаем все input с классом validate-number
