@@ -17,8 +17,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_modals_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/modals.js */ "./src/js/components/modals.js");
 /* harmony import */ var _components_form_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/form.js */ "./src/js/components/form.js");
 /* harmony import */ var _components_form_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_form_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_card_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/card.js */ "./src/js/components/card.js");
-/* harmony import */ var _components_card_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_card_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_validation_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/validation.js */ "./src/js/components/validation.js");
+/* harmony import */ var _components_validation_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_validation_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_card_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/card.js */ "./src/js/components/card.js");
+/* harmony import */ var _components_card_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_card_js__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -159,59 +162,113 @@ __webpack_require__.r(__webpack_exports__);
   \***********************************/
 /***/ (() => {
 
-const hands = document.querySelectorAll('.js-hand');
-hands?.forEach(hand => {
-  const updateCards = () => {
-    const cards = hand.querySelectorAll('.card');
-    const totalCards = cards.length;
-    const maxAngle = hand.dataset.cardsAngle ? parseInt(hand.dataset.cardsAngle, 10) : 55;
-    const flag = hand.dataset.cardsClick ? true : false;
-    cards.forEach((card, index) => {
-      let angle;
-      if (totalCards === 1) {
-        angle = 0;
-      } else {
-        angle = maxAngle * (index / (totalCards - 1)) - maxAngle / 2;
-      }
-      card.style.transform = `rotate(${angle}deg) translateY(-50%)`;
-      if (flag) {
-        card.addEventListener('click', () => {
-          cards.forEach(c => {
-            c.style.transform = c.style.transform.replace(/translateY\(-?(\d+)%?\)/, 'translateY(-50%)');
-          });
-          card.style.transform = `rotate(${angle}deg) translateY(-60%)`;
-        });
-      }
-    });
-  };
-  updateCards();
+const handPlayers = document.querySelectorAll('.js-hand');
+const updateCards = element => {
+  const cards = element.querySelectorAll('.card');
+  const totalCards = cards.length;
+  const baseAngle = element.dataset.cardsAngle ? parseInt(element.dataset.cardsAngle, 10) : 55;
+  let maxAngle = baseAngle;
+  if (totalCards > 6) {
+    // Увеличиваем угол для карт, если их больше 6
+    maxAngle = baseAngle + (totalCards - 6) * 10; // Вы можете настроить значение для лучшего визуального эффекта
+  }
+  cards.forEach((card, index) => {
+    let angle;
+    if (totalCards === 1) {
+      angle = 0;
+    } else {
+      angle = maxAngle * (index / (totalCards - 1)) - maxAngle / 2;
+    }
+    card.style.transform = `rotate(${angle}deg) translateY(-50%)`;
+  });
+};
+handPlayers?.forEach(hand => updateCards(hand));
 
-  // Create a MutationObserver to watch for changes in the hand
-  const observer = new MutationObserver(() => {
-    updateCards();
+// Demo JS code
+const hand = document.querySelector('.lobby-hand');
+const playfieldItems = document.querySelectorAll('.lobby-playfield-item');
+const deckBack = document.querySelector('.lobby-deck-back');
+let isAnimating = false;
+function playCard(card) {
+  if (card.classList.contains('on-playfield') || isAnimating) {
+    return;
+  }
+  const targetSlot = Array.from(playfieldItems).find(slot => slot.children.length < 2);
+  if (!targetSlot) {
+    console.log('Нет свободного места на игровом поле');
+    return;
+  }
+  const cardRect = card.getBoundingClientRect();
+  const targetRect = targetSlot.getBoundingClientRect();
+  const translateX = targetRect.left - cardRect.left;
+  const translateY = targetRect.top - cardRect.top;
+  isAnimating = true;
+  card.style.position = 'absolute';
+  card.style.zIndex = '1000';
+  card.style.left = `${cardRect.left}px`;
+  card.style.top = `${cardRect.top}px`;
+  document.body.appendChild(card);
+  card.classList.add('is-moving');
+  card.style.setProperty('--card-x', `${translateX}px`);
+  card.style.setProperty('--card-y', `${translateY}px`);
+  card.addEventListener('animationend', () => {
+    card.classList.remove('is-moving');
+    card.style.position = '';
+    card.style.zIndex = '';
+    card.style.left = '';
+    card.style.top = '';
+    card.style.transform = '';
+    card.classList.add('card--sm');
+    card.classList.add('on-playfield');
+    targetSlot.appendChild(card);
+    isAnimating = false;
+    updateCards(hand);
+  }, {
+    once: true
   });
-  observer.observe(hand, {
-    childList: true
+}
+function drawCard() {
+  if (isAnimating) {
+    return;
+  }
+  const card = deckBack.querySelector('.card');
+  if (!card) {
+    console.log('Нет карт в колоде');
+    return;
+  }
+  const cardRect = card.getBoundingClientRect();
+  const handRect = hand.getBoundingClientRect();
+  const translateX = handRect.left - cardRect.left;
+  const translateY = handRect.top - cardRect.top;
+  isAnimating = true;
+  card.style.position = 'absolute';
+  card.style.zIndex = '1000';
+  card.style.left = `${cardRect.left}px`;
+  card.style.top = `${cardRect.top}px`;
+  document.body.appendChild(card);
+  card.classList.add('is-drawing');
+  card.style.setProperty('--card-x', `${translateX}px`);
+  card.style.setProperty('--card-y', `${translateY}px`);
+  card.addEventListener('animationend', () => {
+    card.classList.remove('is-drawing');
+    card.style.position = '';
+    card.style.zIndex = '';
+    card.style.left = '';
+    card.style.top = '';
+    card.style.transform = '';
+    card.classList.remove('card--sm');
+    card.classList.remove('is-flipped');
+    hand.appendChild(card);
+    isAnimating = false;
+    updateCards(hand);
+  }, {
+    once: true
   });
-
-  // Disconnect the observer when the hand element is removed from the DOM
-  const observerForRemoval = new MutationObserver(mutations => {
-    mutations.forEach(mutation => {
-      if (mutation.removedNodes.length) {
-        mutation.removedNodes.forEach(removedNode => {
-          if (removedNode === hand) {
-            observer.disconnect();
-            observerForRemoval.disconnect();
-          }
-        });
-      }
-    });
-  });
-  observerForRemoval.observe(document.body, {
-    childList: true,
-    subtree: true
-  });
+}
+hand?.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', () => playCard(card));
 });
+document.querySelector('.lobby-beat')?.addEventListener('click', drawCard);
 
 /***/ }),
 
@@ -393,6 +450,28 @@ document.querySelectorAll('.js-create-specks').forEach(container => {
 
   // Start observing the container
   observer.observe(container);
+});
+
+/***/ }),
+
+/***/ "./src/js/components/validation.js":
+/*!*****************************************!*\
+  !*** ./src/js/components/validation.js ***!
+  \*****************************************/
+/***/ (() => {
+
+function handleNumberInput(event) {
+  const input = event.target;
+  // Используем регулярное выражение для фильтрации ввода
+  input.value = input.value.replace(/[^0-9]/g, '');
+}
+
+// Получаем все input с классом validate-number
+const numberInputs = document.querySelectorAll('.validate-number');
+
+// Добавляем обработчик события input ко всем таким input
+numberInputs?.forEach(input => {
+  input.addEventListener('input', handleNumberInput);
 });
 
 /***/ }),

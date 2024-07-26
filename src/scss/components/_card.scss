@@ -6,6 +6,15 @@
 	perspective: 1000px;
 	position: relative;
 	z-index: 1;
+	transition: left 300ms ease-in-out, top 300ms ease-in-out, transform 300ms ease-in-out;
+
+	&.is-moving {
+		animation: moveHandCard 300ms ease-in-out forwards;
+	}
+
+	&.is-drawing {
+		animation: drawCard 300ms ease-in-out forwards;
+	}
 
 	&-inner {
 		width: 100%;
@@ -161,4 +170,22 @@
 			--_i-size: .75rem;
 		}
 	}
+}
+
+@keyframes moveHandCard {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: translate(var(--card-x), calc(var(--card-y) * 1.125)) scale(.625);
+  }
+}
+
+@keyframes drawCard {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: translate(var(--card-x), var(--card-y)) scale(2);
+  }
 }

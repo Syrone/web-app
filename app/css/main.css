@@ -1743,7 +1743,11 @@ p + p {
   -webkit-transform: rotate(12deg);
   -ms-transform: rotate(12deg);
   transform: rotate(12deg);
+  opacity: 0;
   z-index: 2;
+}
+.lobby-deck-back > .card:nth-child(1), .lobby-deck-back > .card:nth-child(2), .lobby-deck-back > .card:nth-child(3) {
+  opacity: 1;
 }
 .lobby-deck-back > .card:nth-child(2) {
   bottom: -0.125rem;
@@ -1852,6 +1856,18 @@ p + p {
   perspective: 1000px;
   position: relative;
   z-index: 1;
+  -webkit-transition: left 300ms ease-in-out, top 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  transition: left 300ms ease-in-out, top 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  transition: left 300ms ease-in-out, top 300ms ease-in-out, transform 300ms ease-in-out;
+  transition: left 300ms ease-in-out, top 300ms ease-in-out, transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+}
+.card.is-moving {
+  -webkit-animation: moveHandCard 300ms ease-in-out forwards;
+  animation: moveHandCard 300ms ease-in-out forwards;
+}
+.card.is-drawing {
+  -webkit-animation: drawCard 300ms ease-in-out forwards;
+  animation: drawCard 300ms ease-in-out forwards;
 }
 .card-inner {
   width: 100%;
@@ -2005,6 +2021,47 @@ p + p {
   --_i-size: .75rem;
 }
 
+@-webkit-keyframes moveHandCard {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: translate(var(--card-x), calc(var(--card-y) * 1.125)) scale(0.625);
+    transform: translate(var(--card-x), calc(var(--card-y) * 1.125)) scale(0.625);
+  }
+}
+
+@keyframes moveHandCard {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: translate(var(--card-x), calc(var(--card-y) * 1.125)) scale(0.625);
+    transform: translate(var(--card-x), calc(var(--card-y) * 1.125)) scale(0.625);
+  }
+}
+@-webkit-keyframes drawCard {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  to {
+    -webkit-transform: translate(var(--card-x), var(--card-y)) scale(2);
+    transform: translate(var(--card-x), var(--card-y)) scale(2);
+  }
+}
+@keyframes drawCard {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  to {
+    -webkit-transform: translate(var(--card-x), var(--card-y)) scale(2);
+    transform: translate(var(--card-x), var(--card-y)) scale(2);
+  }
+}
 /** > 576px **/
 @media (max-height: 52.5rem) {
   .offset-top {

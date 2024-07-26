@@ -92,7 +92,14 @@
 				position: absolute;
 				bottom: 0;
 				transform: rotate(12deg);
+				opacity: 0;
 				z-index: 2;
+
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3) {
+					opacity: 1;
+				}
 
 				&:nth-child(2) {
 					bottom: -.125rem;

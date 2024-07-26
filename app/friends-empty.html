@@ -521,6 +521,101 @@
         </div>
     </div>
 
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-opponent">
+        <div class="graph-modal__content">
+            <div class="graph-modal__header">
+                <div class="profile profile--modal">
+                    <div class="profile-avatar">
+                        <div class="profile-avatar-inner">
+                            <picture class="profile-avatar-picture">
+                                <source srcset="./img/avatars/avatar-1.webp" type="image/webp">
+                                <img loading="lazy" src="./img/avatars/avatar-1.jpg" class="profile-avatar-image" width="65" height="65"
+									alt="Аватарка">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="profile-info">
+                        <div class="profile-info-name">
+                            UserName
+                        </div>
+                        <div class="profile-info-id">
+                            ID 248023217
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-dark js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="img/icons/close.svg#svg-close"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+
+            <div class="graph-modal__body">
+                <div class="profile-detail">
+                    <div class="profile-detail-name">
+                        Количество
+                        Сыгранных партий
+                    </div>
+                    <div class="profile-detail-value">
+                        256
+                    </div>
+                </div>
+                <div class="profile-detail">
+                    <div class="profile-detail-name">
+                        Количество
+                        Выигранных партий
+                    </div>
+                    <div class="profile-detail-value">
+                        132
+                    </div>
+                </div>
+                <div class="profile-detail">
+                    <div class="profile-detail-name">
+                        Количество
+                        Сыгранных партий
+                    </div>
+                    <div class="profile-detail-value">
+                        <span class="icon profile-detail-icon">
+                            <svg id="svg-star-gold" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_64_3074)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+										d="M15.6123 26.8184L8.45234 31.0402C7.70784 31.4791 6.73456 31.2541 6.27849 30.5375C6.05572 30.1875 5.98932 29.7658 6.09431 29.368L7.20267 25.1691C7.60276 23.6533 8.68041 22.3863 10.1452 21.7094L17.9563 18.0998C18.3205 17.9315 18.474 17.5109 18.2991 17.1604C18.1575 16.8766 17.8373 16.7177 17.515 16.7714L8.82016 18.2203C7.05271 18.5148 5.2402 18.045 3.86537 16.9361L1.11861 14.7206C0.449427 14.1808 0.36156 13.2211 0.922355 12.577C1.19511 12.2637 1.58732 12.0692 2.01068 12.0374L10.4029 11.4052C10.9957 11.3606 11.5124 10.9994 11.74 10.4706L14.9776 2.94844C15.3117 2.17206 16.2365 1.80341 17.0432 2.12503C17.4304 2.27946 17.7382 2.57565 17.8986 2.94844L21.1362 10.4706C21.3638 10.9994 21.8805 11.3606 22.4733 11.4052L30.9117 12.0408C31.7821 12.1064 32.4324 12.8387 32.3643 13.6765C32.3316 14.0795 32.1335 14.4534 31.8139 14.7157L25.3785 19.9964C24.9252 20.3682 24.7277 20.9533 24.8669 21.5105L26.8455 29.4213C27.0498 30.2383 26.5273 31.06 25.6786 31.2567C25.2706 31.3513 24.8404 31.2858 24.4827 31.0748L17.2639 26.8184C16.7571 26.5197 16.1191 26.5197 15.6123 26.8184Z"
+										fill="url(#paint0_linear_64_3074)" />
+                                </g>
+                                <defs>
+                                    <linearGradient id="paint0_linear_64_3074" x1="0.43811" y1="2.06254" x2="33.2884" y2="29.9355"
+										gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FFDA7B" />
+                                        <stop offset="1" stop-color="#FFA800" />
+                                    </linearGradient>
+                                    <clipPath id="clip0_64_3074">
+                                        <rect width="32" height="33" fill="white" transform="translate(0.43811)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                        10,000.00
+                    </div>
+                </div>
+            </div>
+
+            <div class="graph-modal__footer">
+                <div class="graph-modal__referral">
+                    <span class="graph-modal__referral-hint">
+                        *Нажмите, чтобы скопировать
+                    </span>
+                    <button type="button" class="btn btn-sm btn-dark graph-modal__referral-btn">
+                        Реферальная ссылка
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-result">
         <div class="graph-modal__content">
             <div class="graph-modal__body">
@@ -565,7 +660,7 @@
             <div class="graph-modal__body">
                 <div class="form-control">
                     <div class="form-field form-field--icon">
-                        <input type="text" class="field" name="refill" placeholder="Введите количество Star для пополнения" required>
+                        <input type="text" class="field validate-number" name="refill" placeholder="Введите количество Star для пополнения" required>
                         <span class="icon field-icon">
                             <svg>
                                 <svg id="svg-star" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -597,7 +692,7 @@
             <div class="graph-modal__body">
                 <div class="form-control">
                     <div class="form-field form-field--icon">
-                        <input type="text" class="field" name="refill" placeholder="Введите количество Star для пополнения" required>
+                        <input type="text" class="field validate-number" name="refill" placeholder="Введите количество Star для пополнения" required>
                         <span class="icon field-icon">
                             <svg>
                                 <svg id="svg-star" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
