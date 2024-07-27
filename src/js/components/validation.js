@@ -11,9 +11,9 @@ function handleNumberInput(event) {
 		value = parts[0] + '.' + parts.slice(1).join('');
 	}
 
-	// Ограничиваем до двух цифр после десятичной точки
+	// Ограничиваем до одной цифры после десятичной точки
 	if (parts.length === 2) {
-		parts[1] = parts[1].substring(0, 2);
+		parts[1] = parts[1].substring(0, 1);
 		value = parts.join('.');
 	}
 
